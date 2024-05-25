@@ -1,0 +1,46 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="my-3 mx-3">
+    <div class="d-flex">
+      <div class="col-3 card mx-3">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Total Views</h5>
+          <h5 class="card-subtitle mb-2 text-muted">Yearly</h5>
+          <div>
+            <canvas id="total-views-chart"></canvas>
+          </div>
+          <h1 class="card-text text-end">5,000,008</h1>
+        </div>
+      </div>
+      <div class="col-3 card mx-3">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Revenue</h5>
+          <h5 class="card-subtitle mb-2 text-muted">Annual</h5>
+          <div>
+            <canvas id="revenue-chart"></canvas>
+          </div>
+          <h1 class="card-text text-end">$8,008</h1>
+        </div>
+      </div>
+      <div class="col-3 card mx-3 h-25">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Growth Rate</h5>
+          <h5 class="card-subtitle mb-2 text-muted">Yearly</h5>
+          <h1 class="card-text text-end text-success">89%</h1>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="col-lg-8 mx-auto">
+        <h3 class="text-center">DataTable</h3>
+        <table id="datatable"></table>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'assets/js/index.js' %}"></script>
+{% endblock %}
